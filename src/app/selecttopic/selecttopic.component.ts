@@ -12,14 +12,18 @@ export class SelecttopicComponent  {
 
   subjectlist;
   constructor(private service: CommonService , private router: Router) {
-
-    this.subjectlist = ['angular', 'react', 'jquery'];
+  
+  this.subjectlist = ['angular', 'react', 'jquery'];
   }
   question = new FormGroup({
   'subjects': new FormControl()
   });
    startTest(ev) {
+    var d = new Date();
      this.service.firstchoice = this.question.get('subjects').value;
+    this.service.starthour = d.getHours();
+    this.service.startminute = d.getMinutes();
+    this.service.startsecond = d.getSeconds();
     this.service.questionPriority.push(this.question.get('subjects').value);
     for (const subject of this.subjectlist) {
       if ( this.service.questionPriority.indexOf(subject) !== 0) {

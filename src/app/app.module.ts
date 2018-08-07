@@ -9,13 +9,15 @@ import { TestComponent } from './test/test.component';
 import { RouterModule } from '@angular/router';
 import { route } from './routeevent';
 import { SelecttopicComponent } from './selecttopic/selecttopic.component';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    SelecttopicComponent
+    SelecttopicComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
