@@ -1,0 +1,8 @@
+<form [formGroup]="question">
+    <select class="form-control" formControlName="subjects" name="subjects" id="subjects">
+      <option value="angular">angular</option>
+      <option value="react">react</option>
+      <option value="jquery">jquery</option>
+    </select>
+    <button (click)="startTest($event)">Take test</button>
+  </form>

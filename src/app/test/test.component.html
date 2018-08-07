@@ -1,0 +1,11 @@
+<ol>
+  <li *ngFor="let question of questions">
+      {{question.question}}
+      <br>
+      <span *ngFor="let answer of question.answer">
+          <input type="radio" name={{question.name}}>{{answer}}
+          <br>
+      </span>
+  </li>  
+</ol>
+<button (click)="changeQuestion();">next</button>
