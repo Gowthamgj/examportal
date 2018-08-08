@@ -16,6 +16,10 @@ export class CommonService {
   endminute;
   endsecond;
   qindex;
+  totalsec:number=0;
+  timerSec;
+  timerMin;
+  timerHr;
   question = {'angular':
   [{ 'question' : 'What is Model in MVC?',
   'answer': ['Model is the lowest level of the pattern responsible for maintaining data',
@@ -113,6 +117,17 @@ export class CommonService {
     this.hrCorrespondingToQuestion = [];
     this.subwithtime = [];
     this.qindex = 0;
+    this.totalsec= 0;
+    this.timerMin=0;
+    this.timerSec=0;
+    console.log(this.totalsec);
    }
-
+  
+   increaseTime(){
+      this.totalsec = this.totalsec+1;
+      console.log(this.totalsec)
+      this.timerSec=this.totalsec%60;
+      this.timerMin = this.totalsec/60;
+      // console.log(this.timerSec,this.timerMin)
+   }
 }

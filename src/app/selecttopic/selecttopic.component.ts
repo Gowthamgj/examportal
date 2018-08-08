@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { Router } from '@angular/router';
+// import { setInterval } from 'timers';
 @Component({
   selector: 'app-selecttopic',
   templateUrl: './selecttopic.component.html',
@@ -11,14 +12,18 @@ import { Router } from '@angular/router';
 export class SelecttopicComponent  {
 
   subjectlist;
+ 
   constructor(private service: CommonService , private router: Router) {
   
   this.subjectlist = ['angular', 'react', 'jquery'];
+  
   }
   question = new FormGroup({
   'subjects': new FormControl()
   });
    startTest(ev) {
+     this.service.totalsec=0;
+     console.log(this.service.totalsec);
     var d = new Date();
      this.service.firstchoice = this.question.get('subjects').value;
     this.service.starthour = d.getHours();
@@ -31,6 +36,7 @@ export class SelecttopicComponent  {
       }
     }
     this.router.navigate(['/test']);
+   
   }
 
 }
