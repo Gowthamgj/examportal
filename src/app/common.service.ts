@@ -8,13 +8,7 @@ export class CommonService {
   secCorrespondingToQuestion;
   hrCorrespondingToQuestion;
   minCorrespondingToQuestion;
-  starthour;
-  startminute;
-  startsecond;
-  endhour;
   subwithtime;
-  endminute;
-  endsecond;
   qindex;
   totalsec;
   timerSec;
@@ -87,7 +81,7 @@ export class CommonService {
   ' the % sign'],
   'name': 2,
   'option': 'b',
-  'crctansweroption':'a'  
+  'crctansweroption':'a'
 },
 { 'question' : 'Which sign does jQuery use as a shortcut for jQuery?',
 'answer': ['the $ sign',
