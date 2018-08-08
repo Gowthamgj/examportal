@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { route } from './routeevent';
 import { SelecttopicComponent } from './selecttopic/selecttopic.component';
 import { ResultComponent } from './result/result.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ResultComponent } from './result/result.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     RouterModule.forRoot(route)
   ],
   providers: [CommonService],

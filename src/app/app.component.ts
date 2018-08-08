@@ -11,8 +11,7 @@ export class AppComponent {
   title = 'app';
   subjectlist;
   constructor(private service: CommonService , private router: Router) {
-
-    this.subjectlist = ['angular', 'react', 'jquery'];
+  this.subjectlist = ['angular', 'react', 'jquery'];
   }
   question = new FormGroup({
   'subjects': new FormControl()

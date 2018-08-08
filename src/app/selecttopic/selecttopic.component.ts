@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { Router } from '@angular/router';
-// import { setInterval } from 'timers';
+
 @Component({
   selector: 'app-selecttopic',
   templateUrl: './selecttopic.component.html',
