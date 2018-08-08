@@ -16,7 +16,7 @@ export class CommonService {
   endminute;
   endsecond;
   qindex;
-  totalsec:number=0;
+  totalsec;
   timerSec;
   timerMin;
   timerHr;
@@ -27,8 +27,7 @@ export class CommonService {
   ' Model represents server side data'],
   'name': 1,
   'option': 'a',
-  'crctansweroption':'a'
-  
+  'crctansweroption': 'a'
 },
 { 'question' : 'What is Model in MVC?',
   'answer': ['Model is the lowest level of the pattern responsible for maintaining data',
@@ -36,9 +35,7 @@ export class CommonService {
   ' Model represents server side data'],
   'name' : 2,
   'option': 'b',
-  'crctansweroption':'a'
-  
-  
+  'crctansweroption': 'a'
 },
 { 'question' : 'What is Model in MVC?',
   'answer': ['Model is the lowest level of the pattern responsible for maintaining data',
@@ -46,8 +43,7 @@ export class CommonService {
   ' Model represents server side data'],
   'name' : 3,
   'option': 'c',
-  'crctansweroption':'a'
-  
+  'crctansweroption': 'a'
 },
 ],
 'react':
@@ -57,9 +53,7 @@ export class CommonService {
   ' Model represents server side data'],
   'name': 1,
   'option': 'a',
-  'crctansweroption':'a'
-  
-  
+  'crctansweroption': 'a'
 },
 { 'question' : 'In which directory React Components are saved?',
   'answer': ['Inside js/components/',
@@ -67,9 +61,7 @@ export class CommonService {
   ' Model represents server side data'],
   'name' : 2,
   'option': 'b',
-  'crctansweroption':'a'
-  
-  
+  'crctansweroption': 'a'
 },
 { 'question' : 'In which directory React Components are saved?',
   'answer': ['Inside js/components/',
@@ -78,8 +70,6 @@ export class CommonService {
   'name' : 3,
   'option': 'c',
   'crctansweroption':'a'
-  
-  
 },
 ],
 'jquery':
@@ -89,13 +79,13 @@ export class CommonService {
   ' the % sign'],
   'name': 1,
   'option': 'a',
-  'crctansweroption':'a'  
+  'crctansweroption': 'a'
 },
 { 'question' : 'Which sign does jQuery use as a shortcut for jQuery?',
   'answer': ['the $ sign',
   ' the ? Sign',
   ' the % sign'],
-  'name': 1,
+  'name': 2,
   'option': 'b',
   'crctansweroption':'a'  
 },
@@ -103,7 +93,7 @@ export class CommonService {
 'answer': ['the $ sign',
 ' the ? Sign',
 ' the % sign'],
-'name': 1,
+'name': 3,
 'option': 'c',
 'crctansweroption':'a'
 },

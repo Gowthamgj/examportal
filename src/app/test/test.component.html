@@ -1,10 +1,16 @@
 <h1>{{min}}:{{sec}}</h1>
+<h1>{{subjectname}}</h1>
+
 <ol>
-  <li *ngFor="let question of questions">
+  <li *ngFor="let question of questions" >
       {{question.question}}
       <br>
       <span *ngFor="let answer of question.answer">
-          <input type="radio" name={{question.name}} value={{question.option}}>{{answer}}
+          <input type="radio"
+           name={{question.name}}
+           value={{question.option}}
+            >
+           {{answer}}
           <br>
       </span>
   </li>  
