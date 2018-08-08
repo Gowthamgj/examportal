@@ -45,8 +45,7 @@ export class TestComponent implements OnInit {
     this.subjectname = this.service.questionPriority[this.service.qindex]
     this.questions = this.service.question[this.service.questionPriority[this.service.qindex]];
     this.interval = setInterval(()=>{
-     this.service.totalsec = this.service.totalsec+1;
-    console.log(this.service.totalsec)
+    this.service.totalsec = this.service.totalsec+1;
     this.service.timerSec=this.service.totalsec%60;
     this.service.timerMin = this.service.totalsec/60;
     this.sec = Math.floor(this.service.timerSec);
@@ -57,7 +56,6 @@ export class TestComponent implements OnInit {
     clearInterval(this.interval);
     this.service.hrCorrespondingToQuestion.push(Math.floor(this.service.timerMin) + ':' + this.service.timerSec);    
     this.service.hrCorrespondingToQuestion.push((this.service.starthour-this.service.endhour)+':'+ (this.service.endminute - this.service.startminute)+':'+(this.service.endsecond-this.service.startsecond));
-    console.log(this.service.questionPriority[this.service.qindex])
     for(var i=0;i<this.service.questionPriority.length;i++){
       this.service.subwithtime.push({'coursename':this.service.questionPriority[i],'time':this.service.hrCorrespondingToQuestion[i]});
     }
