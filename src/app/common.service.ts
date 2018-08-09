@@ -18,8 +18,10 @@ export class CommonService {
   url;
   question;
   constructor(private http: Http) {
+   
     this.questionPriority = [];
-    this.url = 'file:///C:/Users/gowthamrajs/Desktop/examportal/src/app/question.json';
+    this.url = '../assets/question.json';
+    this.getQuestion();
     this.minCorrespondingToQuestion = [];
     this.secCorrespondingToQuestion = [];
     this.hrCorrespondingToQuestion = [];
@@ -28,13 +30,14 @@ export class CommonService {
     this.totalsec = 0;
     this.timerMin = 0;
     this.timerSec = 0;
-    this.getQuestion();
     console.log(this.totalsec);
    }
    getQuestion() {
      this.http.get(this.url)
      .subscribe((res) => {
-       console.log(res.json());
+       console.log(res)
+       this.question=res.json();
+       console.log(this.question);
      });
    }
    increaseTime() {

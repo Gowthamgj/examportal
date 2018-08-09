@@ -24,11 +24,9 @@ export class SelecttopicComponent  {
    startTest(ev) {
      this.service.totalsec=0;
      console.log(this.service.totalsec);
+     
     var d = new Date();
      this.service.firstchoice = this.question.get('subjects').value;
-    this.service.starthour = d.getHours();
-    this.service.startminute = d.getMinutes();
-    this.service.startsecond = d.getSeconds();
     this.service.questionPriority.push(this.question.get('subjects').value);
     for (const subject of this.subjectlist) {
       if ( this.service.questionPriority.indexOf(subject) !== 0) {

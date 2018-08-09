@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
@@ -14,10 +15,20 @@ export class TestComponent implements OnInit {
   min;
   interval;
   subjectname;
+  selectedAnswer;
+  form:FormGroup;
   constructor(private service: CommonService, private router: Router) {
      const fchoice = this.service.firstchoice;
+     this.service.getQuestion();
      console.log(fchoice);
+     this.form= new FormGroup({
+       "q1":new FormControl('',[]),
+       "q2":new FormControl('',[]),
+       "q3":new FormControl('',[]),         
+     })
      this.subjectname = fchoice;
+    //  console.log(this.service.question);
+     this.selectedAnswer = {};
     this.questions = this.service.question[fchoice];
     console.log(this.questions);
     this.sec = this.service.timerSec;
@@ -35,7 +46,12 @@ export class TestComponent implements OnInit {
   ngOnInit() {
   }
   changeQuestion() {
-
+    console.log(this.form.value);
+    this.selectedAnswer[this.subjectname]={'q1':this.form.get('q1').value,'q2':this.form.get('q2').value,'q3':this.form.get('q3').value};
+    this.form.get('q1').value='';
+    this.form.get('q2').value='';
+    this.form.get('q3').value='';
+    
     clearInterval(this.interval);
     this.service.hrCorrespondingToQuestion.push(Math.floor(this.service.timerMin) + ':' + this.service.timerSec);
     this.service.totalsec = 0;
@@ -54,11 +70,12 @@ export class TestComponent implements OnInit {
   }
   resultPage() {
     clearInterval(this.interval);
-    this.service.hrCorrespondingToQuestion.push(Math.floor(this.service.timerMin) + ':' + this.service.timerSec);    
-    this.service.hrCorrespondingToQuestion.push((this.service.starthour-this.service.endhour)+':'+ (this.service.endminute - this.service.startminute)+':'+(this.service.endsecond-this.service.startsecond));
+    this.selectedAnswer[this.subjectname]={'q1':this.form.get('q1').value,'q2':this.form.get('q2').value,'q3':this.form.get('q3').value};    
+    this.service.hrCorrespondingToQuestion.push(Math.floor(this.service.timerMin) + ':' + this.service.timerSec);
     for(var i=0;i<this.service.questionPriority.length;i++){
       this.service.subwithtime.push({'coursename':this.service.questionPriority[i],'time':this.service.hrCorrespondingToQuestion[i]});
     }
     this.router.navigate(['/result']);
+    console.log(this.selectedAnswer);
   }
 }

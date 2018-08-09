@@ -1,0 +1,79 @@
+{"angular":
+  [{ "question" : "What is Model in MVC?",
+  "answer": [{"name":"c1","val":"Model is the lowest level of the pattern responsible for maintaining data","opt":"a"},
+  {"name":"c2","val":" Model represents data stored in database","opt":"b"},
+  {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q1",
+  "option": "a",
+  "crctansweroption": "a"
+},
+{ "question" : "What is Model in MVC?",
+  "answer":  [{"name":"c1","val":"Model is the lowest level of the pattern responsible for maintaining data","opt":"a"},
+    {"name":"c2","val":" Model represents data stored in database","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q2",
+  "option": "b",
+  "crctansweroption": "a"
+},
+{ "question" : "What is Model in MVC?",
+  "answer": [{"name":"c1","val":"Model is the lowest level of the pattern responsible for maintaining data","opt":"a"},
+    {"name":"c2","val":" Model represents data stored in database","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q3",
+  "option": "a",
+  "crctansweroption": "a"
+}
+],
+"react":
+  [{ "question" : "In which directory React Components are saved?",
+  "answer":  [{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q1",
+  "option": "a",
+  "crctansweroption": "a"
+},
+{ "question" : "In which directory React Components are saved?",
+  "answer": [{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q2",
+  "option": "a",
+  "crctansweroption": "a"
+},
+{ "question" : "In which directory React Components are saved?",
+  "answer": [{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q3",
+  "option": "a",
+  "crctansweroption": "a"
+}
+],
+"jquery":
+  [{ "question" : "Which sign does jQuery use as a shortcut for jQuery?",
+  "answer": [{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q1",
+  "option": "a",
+  "crctansweroption": "a"
+},
+{ "question" : "Which sign does jQuery use as a shortcut for jQuery?",
+  "answer": [{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q2",
+  "option": "a",
+  "crctansweroption": "a"
+},
+{ "question" : "Which sign does jQuery use as a shortcut for jQuery?",
+  "answer":[{"name":"c1","val":"Inside js/components/","opt":"a"},
+    {"name":"c2","val":" Inside vendor/components/","opt":"b"},
+    {"name":"c3","val":" Model represents server side data","opt":"c"}],
+  "name": "q3",
+  "option": "a",
+  "crctansweroption": "a"
+}
+]
+}
